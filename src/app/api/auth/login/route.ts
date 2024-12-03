@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
             },
             {
                 status: HTTP_STATUS.OK,
-            },
+            },  
         );
         response.cookies.set("token", token, {
             maxAge: 60 * 60 * 24 * 365 * 2,

@@ -45,17 +45,19 @@ export async function POST(request: NextRequest) {
             state,
             city,
             password: hashedPassword,
+            isVerified: true,
         });
 
         const savedUser = await newUser.save();
         console.log(savedUser);
 
         //send verification email
-        await sendEmail({
-            email,
-            emailType: "VERIFY_USER",
-            userId: savedUser._id,
-        });
+        // await sendEmail({
+        //     email,
+        //     emailType: "VERIFY_USER",
+        //     userId: savedUser._id,
+        // });
+
         return NextResponse.json(
             {
                 message: "Email sent. Please verify your registration.",
