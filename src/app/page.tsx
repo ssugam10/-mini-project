@@ -212,7 +212,7 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <Contact />
+            {/* <Contact /> */}
         </section>
     );
 };
